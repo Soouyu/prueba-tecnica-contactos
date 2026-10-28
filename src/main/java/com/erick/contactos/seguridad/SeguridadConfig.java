@@ -34,8 +34,8 @@ public class SeguridadConfig {
                 // sin sesiones cada peticion se identifica con su token
                 .sessionManagement(s -> s.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(permisos -> permisos
-                        // el login es libre sin token
-                        .requestMatchers("/api/auth/**").permitAll()
+                        // el login es libre sin token - DOCUMENTACION SWAGGER
+                        .requestMatchers("/swagger-ui/**", "/swagger-ui.html", "/v3/api-docs/**").permitAll()
                          //todo lo demas exige token
                         .anyRequest().authenticated()
                 )
