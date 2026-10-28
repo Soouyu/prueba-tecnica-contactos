@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16
+    container_name: contactos-db
+    environment:
+      POSTGRES_DB: contactos
+      POSTGRES_USER: contactos
+      POSTGRES_PASSWORD: contactos123
+    ports:
+      - "5433:5432"
+    volumes:
+      - contactos_data:/var/lib/postgresql/data
+
+volumes:
+  contactos_data:
