@@ -66,6 +66,14 @@ La base de datos es potgresql y se levanta con docker
 
 La aplicacion corre en el puerto 8080.
 
+## Documentación de la API (Swagger)
+
+La API está documentada con OpenAPI/Swagger (springdoc-openapi).
+
+Con el backend corriendo, abrir en el navegador:
+
+    http://localhost:8080/swagger-ui.html
+
 ## Desiciones tecnicas
 
 - Arquitectura por capas
