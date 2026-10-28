@@ -50,6 +50,30 @@ Organizado por capas son las siguientes:
 - Seguridad
 - Excepciones
 
+## base de datos y docker
+La base de datos es potgresql y se levanta con docker
+ para levantarla 
+  docker compose up -d
+
+   Esto crea la base de datos el puerto 5433
+
+  Variables de entorno que necesita el backend para arrancar
+- DB_PASSWORD=contactos123
+- JWT_SECRET=una-clave-secreta-larga
+- APP_USUARIO=admin
+- APP_CLAVE=admin123
+
+
+La aplicacion corre en el puerto 8080.
+
+## Documentación de la API (Swagger)
+
+La API está documentada con OpenAPI/Swagger (springdoc-openapi).
+
+Con el backend corriendo, abrir en el navegador:
+
+    http://localhost:8080/swagger-ui.html
+
 ## Desiciones tecnicas
 
 - Arquitectura por capas
